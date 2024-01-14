@@ -16,10 +16,7 @@ async execute(client, interaction) {
                         ### 🔮 vote room : <#${jdb.get('photo_room')}>
 
                         ### 🧮 participants number : \`${jdb.get('entries')}\`
-                        `)
-                        .setThumbnail(
-                            "https://media.discordapp.net/attachments/1113490361843732510/1130937114889031690/4712139-removebg-preview_1.png?width=595&height=595"
-                          );
+                        `);
     interaction.channel.send({embeds : [botinfo]})
 
 }

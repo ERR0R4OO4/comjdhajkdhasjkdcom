@@ -1,6 +1,7 @@
 const { EmbedBuilder, CommandInteraction } = require('discord.js')
 const { Database } = require("st.db");
 const jdb = new Database("./json/database.json");
+const { PermissionsBitField } = require("discord.js");
 module.exports = {
 name: "set-participate-status",
 description: "تحديد حالة المشاركة في المسابقة ( مغلق / مفتوح )",
@@ -23,6 +24,11 @@ description: "تحديد حالة المشاركة في المسابقة ( مغ�
     }
 ],
 async execute(client, interaction) {
+      if (!interaction.member.permissions.has("Administrator"))
+      return interaction.reply({
+        content: ":x: | You don't have permission",
+        ephemeral: true,
+      });
     const partc_status = interaction.options.getString('participate_st')
 
     if (partc_status == "open") {

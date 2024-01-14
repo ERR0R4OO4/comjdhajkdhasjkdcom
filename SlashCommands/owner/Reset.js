@@ -1,6 +1,7 @@
 const { EmbedBuilder, CommandInteraction } = require('discord.js')
 const { Database } = require("st.db");
 const jdb = new Database("./json/database.json");
+const { PermissionsBitField } = require("discord.js");
 module.exports = {
 name: "reset",
 description: "لحذف بيانات المسابقة ( صور / مشاركين ... )",
@@ -13,6 +14,11 @@ description: "لحذف بيانات المسابقة ( صور / مشاركين .
     }
 ],
 async execute(client, interaction) {
+      if (!interaction.member.permissions.has("Administrator"))
+      return interaction.reply({
+        content: ":x: | You don't have permission",
+        ephemeral: true,
+      });
     const surev = interaction.options.getString('sure');
     if(surev == '1'){
         const vote_r_d = await interaction.guild.roles.cache.get(jdb.get('apply_role'));

